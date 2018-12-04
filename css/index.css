@@ -1,0 +1,351 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* 第一屏 */
+.first .logo{
+  width: 251px;
+  height: 186px;
+   background-image: url(../images/logo.png);
+   margin: 80px auto;
+}
+.first .text {
+  text-align: center;
+}
+.first .text img{
+  margin: 0px 30px;
+  opacity: 0;
+}
+.first .tips {
+  width: 772px;
+  height: 49px;
+  background-image:url(../images/info_1.png);
+  margin: 80px auto;
+}
+/* 第一屏动画 */
+.first.current .text img{
+  margin: 0 5px;
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* 第二屏 */
+.second > div {
+  display: flex;
+   padding: 0 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.second .shield {
+  width: 500px;
+  font-size: 0;
+}
+.second .infos {
+  width: 635px;
+  height: 309px;
+  margin-right: 200px; 
+  background-image: url(../images/info_2.png);
+}
+.second .shield img:first-child {
+  transform: translate(800px,-150px) rotate(50deg);
+}
+.second .shield img:nth-child(2) {
+  transform: translate(500px,200px) rotate(30deg);
+}
+.second .shield img:nth-child(3) {
+  transform: translate(300px,500px) rotate(50deg);
+}
+.second .shield img:nth-child(4) {
+  transform: translate(-100px,-300px) rotate(50deg);
+}
+.second .shield img:nth-child(5) {
+  transform: translate(800px,200px) rotate(50deg);
+}
+.second .shield img:nth-child(6) {
+  transform: translate(60px,320px) rotate(50deg);
+}
+.second .shield img:nth-child(7) {
+  transform: translate(200px,-400px) rotate(30deg);
+}
+.second .shield img:nth-child(8) {
+  transform: translate(700px,-300px) rotate(30deg);
+}
+.second .shield img:nth-child(9) {
+  transform: translate(0px,-30px) rotate(60deg);
+}
+/* 第二屏动画 */
+.second.current .shield img {
+  transform: translate(0,0) rotate(0deg);
+  transition: all 1s;
+}
+
+/* 第三屏 */
+.third>div {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 200px;
+
+}
+.third .text {
+  width: 631px;
+  height: 278px;
+  background-image: url(../images/info_3.png);
+}
+.third .circle {
+  width: 453px;
+  height: 449px;
+  background-image: url(../images/circle.png);
+  position: relative;
+}
+.third .rocket {
+  width: 203px;
+  height: 204px;
+  background-image: url(../images/rocket.png);
+  position: absolute;
+  bottom: -400px;
+  left:-250px;
+}
+/* 第三屏动画 */
+.third.current .rocket {
+   /* transform: translate(390px,-520px);*/
+  left: 110px;
+  bottom:120px;
+  transition: all 1s linear;
+}
+/* 第四屏 */
+.four>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+/* 左 */
+.four .nav {
+  width: 530px;
+  height: 438px;
+  position: relative;
+  
+}
+.four .nav .search {
+  width: 100%;
+  height: 66px;
+  background-image: url(../images/search.png);
+  transform: translate(-120%);
+}
+.four .result-box {
+  width: 529px;
+  height: 372px;
+  position: relative;
+  top:-13px;
+  overflow: hidden;
+}
+.four .result-box .result {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/result.png);
+  transform: translate(0,-100%);
+
+}
+.four .nav .key {
+  width: 0px;
+  height: 22px;
+  background-image: url(../images/key.png);
+  background-position: -2px 0px;
+  position: absolute;
+  top:24px;
+  left:20px; 
+} 
+/* 右 */
+ .four .text {
+  width: 612px;
+  height: 299px;
+  background-image: url(../images/info_4.png);
+} 
+/* 第四屏动画 */
+.four.current .nav .search{
+   transform: translate(0);
+   transition: all 1s;
+}
+.four.current .nav .key {
+  animation: typing 1.5s steps(5) 1.2s forwards;
+}
+.four.current .nav .result{
+    
+  transform: translate(0,0);
+  transition: all 1s 3s;
+}
+
+@keyframes typing {
+  0%{
+    width: 0px;
+  }
+  100% {
+    width: 99px;
+  }
+}
+
+
+/* 第五屏 */
+/* .five {
+  position: relative;
+} */
+.five .info {
+  width: 1100px;
+  height: 134px;
+  background-image: url(../images/info_5.png);
+  background-repeat: no-repeat;
+  margin: 30px auto;
+}
+/* 边框线 */
+.five .border-side {
+  width: 1050px;
+  height: 630px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.border-side .side {
+  background-color: #fff;
+  position: absolute;
+}
+.border-side .left {
+  width: 1px;
+  height: 100%;
+  top:-100%;
+  opacity: 0;
+}
+
+.border-side .right {
+   height: -100%;
+   width: 1px;
+   right: 0;
+   opacity: 0;
+}
+.border-side .top {
+  width: 100%;
+  height: 1px;
+  right: -100%;
+  opacity: 0;
+}
+.border-side .bot_t {
+  width: 100%;
+  height: 1px;
+  bottom: 30px;
+  left:-100%;
+  opacity: 0;
+}
+.border-side .bottom {
+  width: 0%;
+  height: 1px;
+  bottom: 0px;
+}
+.border-side .searchBar {
+  width: 1010px;
+  height: 80px;
+  background-image: url(../images/toolbar.png);
+  position: absolute;
+  left:20px;
+  top:10px;
+  opacity: 0;
+}
+
+/* 内框线 */
+.border-side .search_left,.border-side .search_right{
+  height: 30px;
+  width: 1px;
+  left:100px;
+  top:40px;
+  opacity: 0;
+}
+
+.border-side .search_right {
+  left:1010px;
+}
+.border-side .search_top,.border-side .search_bottom {
+  height: 1px;
+  width: 0px;
+  left:100px;
+  top:40px;
+
+}
+.border-side .search_bottom {
+  top:70px;
+}
+.border-side .foot {
+  width: 394px;
+  height: 29px;
+  background-image: url(../images/extra.png);
+  position: absolute;
+  bottom:0;
+  right:20px;
+  opacity: 0;
+
+}
+
+
+/* 第五屏动画 */
+
+/* 边框线 */
+.five.current .border-side .bottom {
+  opacity: 1;
+  width:100%;
+  transition: all 1s ;
+}
+.five.current .border-side .left {
+  opacity: 1;
+  top:0;
+  transition: all 1s 1.2s;
+}
+.five.current .border-side .right {
+   opacity: 1; 
+  height: 100%;
+  transition: all 1.5s 2s;
+}
+.five.current .border-side .top {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+  transition: all 1s 2.5s;
+}
+.five.current .border-side .bot_t{
+  opacity: 1;
+  left: 0;
+  transition: all 1s 2.8s;
+}
+/* 内框线 */
+.five.current .border-side .search_left {
+  opacity: 1;
+  transition: all 1s 3.5s;
+}
+.five.current .border-side .search_top,.five.current .border-side .search_bottom {
+  width: 910px;
+  height: 1px;
+  transition: all 1s 3.8s;
+}
+.five.current .border-side .search_right{
+  opacity: 1;
+  transition: all 1s 4.5s;
+}
+.five.current .border-side .searchBar  {
+  opacity: 1;
+  transition: all 1s 4s;
+}
+.five.current .border-side .foot {
+  opacity: 1;
+  
+}
+.five.current .border-side {
+  background-color: #31B2DC;
+  transition: all 1s 4.2s;
+}
+
+
+
+
